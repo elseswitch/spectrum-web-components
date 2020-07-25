@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include "partials/meta-info.njk" %}
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+      <link rel="stylesheet" href="/fonts.css">
+    </noscript>
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+    <script async defer>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js');
+          });
+        }
+    </script>
+  </body>
+</html>

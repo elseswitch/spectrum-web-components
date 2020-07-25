@@ -20,7 +20,10 @@ const postCSSPlugins = (resourcePath) => {
         require('postcss-import')(postCSSImportConfig),
         require('postcss-inherit')(),
         require('postcss-preset-env')({
-            stage: 0,
+            stage: 2,
+            features: {
+                'nesting-rules': true,
+            },
         }),
         require('postcss-focus-visible')({ preserve: false }),
         // minify the css with cssnano presets

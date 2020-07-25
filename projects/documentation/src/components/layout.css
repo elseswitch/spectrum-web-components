@@ -1,0 +1,255 @@
+/*
+Copyright 2019 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+:host {
+    display: block;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+docs-side-nav:not(:defined) {
+    display: none;
+}
+
+@media screen and (min-width: 961px) {
+    docs-side-nav:not(:defined) {
+        display: block;
+        padding: 142px 24px 24px;
+    }
+}
+
+#body {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    color: var(--spectrum-global-color-gray-800);
+}
+
+@media screen and (max-width: 960px) {
+    #body {
+        height: 50%;
+    }
+}
+
+#layout-content {
+    background-color: var(--spectrum-global-color-gray-50);
+    width: 100%;
+}
+
+#page {
+    padding: var(--spectrum-global-dimension-size-500)
+        var(--spectrum-global-dimension-size-700);
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.manage-theme {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.manage-theme > div {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 960px) {
+    #page {
+        padding: var(--spectrum-global-dimension-size-100)
+            var(--spectrum-global-dimension-size-300);
+    }
+
+    .manage-theme {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height: var(--spectrum-global-dimension-size-600);
+    border-bottom: 1px solid var(--spectrum-global-color-gray-200);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--spectrum-global-color-gray-50);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding-left: 8px;
+    z-index: 1;
+
+    --spectrum-actionbutton-height: var(--spectrum-global-dimension-size-500);
+    --spectrum-actionbutton-min-width: var(
+        --spectrum-global-dimension-size-500
+    );
+    --spectrum-alias-workflow-icon-size: 22px;
+}
+
+header svg {
+    stroke: transparent;
+    height: 100%;
+}
+
+:host([dir='ltr']) .manage-theme label {
+    margin-left: var(--spectrum-global-dimension-size-400);
+}
+
+:host([dir='rtl']) .manage-theme label {
+    margin-right: var(--spectrum-global-dimension-size-400);
+}
+
+sp-dropdown:not(:defined) {
+    height: var(
+        --spectrum-dropdown-height,
+        var(--spectrum-global-dimension-size-400)
+    );
+    min-width: 70px;
+}
+
+sp-dropdown:not(:defined) sp-menu {
+    display: none;
+}
+
+@media screen and (min-width: 961px) {
+    header {
+        display: none;
+    }
+}
+
+/**
+ * TODO: Remove this manual copy of the Spectrum Field Label styles 
+ * once https://github.com/adobe/spectrum-web-components/issues/475
+ * has been addressed and this element is natively part of the library
+ **/
+label {
+    /* .spectrum-FieldLabel,
+    * .spectrum-Form-itemLabel */
+    display: block;
+
+    box-sizing: border-box;
+
+    padding-top: var(
+        --spectrum-fieldlabel-padding-top,
+        var(--spectrum-global-dimension-size-50)
+    );
+
+    padding-bottom: var(
+        --spectrum-fieldlabel-padding-bottom,
+        var(--spectrum-global-dimension-size-65)
+    );
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: var(
+        --spectrum-fieldlabel-text-size,
+        var(--spectrum-global-dimension-font-size-75)
+    );
+    font-weight: var(
+        --spectrum-fieldlabel-text-font-weight,
+        var(--spectrum-global-font-weight-regular)
+    );
+    line-height: var(
+        --spectrum-fieldlabel-text-line-height,
+        var(--spectrum-global-font-line-height-small)
+    );
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-smoothing: subpixel-antialiased;
+
+    display: inline-block;
+    padding-top: var(
+        --spectrum-fieldlabel-side-padding-top,
+        var(--spectrum-global-dimension-size-100)
+    );
+    padding-bottom: 0;
+    color: var(
+        --spectrum-fieldlabel-text-color,
+        var(--spectrum-alias-label-text-color)
+    );
+}
+
+:host([dir='ltr']) label {
+    padding-left: 0;
+    padding-right: var(
+        --spectrum-fieldlabel-side-padding-x,
+        var(--spectrum-global-dimension-size-100)
+    );
+}
+
+:host([dir='rtl']) label {
+    padding-right: 0;
+    padding-left: var(
+        --spectrum-fieldlabel-side-padding-x,
+        var(--spectrum-global-dimension-size-100)
+    );
+}
+
+.alerts {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.alerts sp-toast {
+    margin: 0 auto var(--spectrum-global-dimension-size-300);
+}
+
+#logo {
+    outline: none;
+    margin-bottom: -11px;
+    padding: var(--spectrum-global-dimension-size-350)
+        var(--spectrum-global-dimension-size-300);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    color: var(--spectrum-global-color-gray-800);
+    text-decoration: none;
+    width: var(--spectrum-global-dimension-size-2400);
+}
+
+#logo docs-spectrum-logo {
+    width: 36px;
+    height: 31px;
+    display: block;
+    margin-right: var(--spectrum-global-dimension-size-200);
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+#logo .title {
+    font-size: 18px;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1.3;
+    font-style: normal;
+    letter-spacing: 0px;
+    margin: -3px 0 0;
+    font-family: var(
+        --spectrum-alias-body-text-font-family,
+        var(--spectrum-global-font-family-base)
+    );
+}
