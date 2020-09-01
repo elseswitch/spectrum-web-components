@@ -58,6 +58,8 @@ import { Rule } from '@spectrum-web-components/rule';
 
 When a vertical Rule is used inside of a flex container, use `align-self: stretch; height: auto;` on the Rule.
 
+<sp-icons-medium></sp-icons-medium>
+
 ```html-live
 <sp-icons-medium></sp-icons-medium>
 <div style="height: 32px; display: flex;">
