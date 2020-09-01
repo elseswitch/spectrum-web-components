@@ -1,0 +1,37 @@
+<div class="section examples">
+    <h2 id="description">Description&nbsp;<sp-link class="header-anchor" href="#description" aria-label="§">#</sp-link></h2>
+<p>An <code>&lt;sp-switch&gt;</code> is used to turn an option on or off. Switches allow users to select the state of a single option at a time. Use a switch rather than a checkbox when activating (or deactivating) an option, instead of selecting.</p>
+<h3 id="usage">Usage&nbsp;<sp-link class="header-anchor" href="#usage" aria-label="§">#</sp-link></h3>
+<p><a href="https://www.npmjs.com/package/@spectrum-web-components/switch"><img src="https://img.shields.io/npm/v/@spectrum-web-components/switch?style=for-the-badge" alt="See it on NPM!"></a>
+<a href="https://bundlephobia.com/result?p=@spectrum-web-components/switch"><img src="https://img.shields.io/bundlephobia/minzip/@spectrum-web-components/switch?style=for-the-badge" alt="How big is this package in your project?"></a></p>
+<pre><code>yarn add @spectrum-web-components/switch
+</code></pre>
+<p>Import the side effectful registration of <code>&lt;sp-switch&gt;</code> via:</p>
+<pre><code>import '@spectrum-web-components/switch/sp-switch.js';
+</code></pre>
+<p>When looking to leverage the <code>Switch</code> base class as a type and/or for extension purposes, do so via:</p>
+<pre><code>import { Switch } from '@spectrum-web-components/switch';
+</code></pre>
+<h2 id="example">Example&nbsp;<sp-link class="header-anchor" href="#example" aria-label="§">#</sp-link></h2>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-switch</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Switch<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>spAlert(this, '&lt;sp-switch> clicked!')<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    Switch<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-switch</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="variants">Variants&nbsp;<sp-link class="header-anchor" href="#variants" aria-label="§">#</sp-link></h2>
+<h3 id="standard-switches">Standard switches&nbsp;<sp-link class="header-anchor" href="#standard-switches" aria-label="§">#</sp-link></h3>
+<p>Standard switches are the default style for switches. The blue color provides a
+visual prominence that is optimal for forms, settings, etc. where the switches
+need to be noticed.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-switch</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-switch</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="quiet-switches">Quiet switches&nbsp;<sp-link class="header-anchor" href="#quiet-switches" aria-label="§">#</sp-link></h3>
+<p>Quiet switches are a secondary style for switches. The gray color provides a
+less prominent style than the standard switches. They are optimal for
+application panels where all visual elements are monochrome in order to direct
+focus to the content.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-switch</span> <span class="token attr-name">checked</span> <span class="token attr-name">quiet</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-switch</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="state">State&nbsp;<sp-link class="header-anchor" href="#state" aria-label="§">#</sp-link></h2>
+<h3 id="checked-(controlled)">Checked (controlled)&nbsp;<sp-link class="header-anchor" href="#checked-(controlled)" aria-label="§">#</sp-link></h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-switch</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Checked true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-switch</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="disabled">Disabled&nbsp;<sp-link class="header-anchor" href="#disabled" aria-label="§">#</sp-link></h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-switch</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>Disabled switch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-switch</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="accessibility">Accessibility&nbsp;<sp-link class="header-anchor" href="#accessibility" aria-label="§">#</sp-link></h2>
+<p>Switch are accessible by default, rendered in HTML using the <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element with the appropriate accessibility role, <code>switch</code>. When the Switch is <code>checked</code> or <code>invalid</code>, the appropriate ARIA state attribute will automatically be applied.</p>
+
+</div>

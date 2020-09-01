@@ -1,0 +1,45 @@
+<div class="section examples">
+    <h2 id="description">Description&nbsp;<sp-link class="header-anchor" href="#description" aria-label="§">#</sp-link></h2>
+<p><code>&lt;sp-checkbox&gt;</code> allow users to select multiple items from a list of independent
+options, or to mark an individual option as selected.</p>
+<p>Should I use a checkbox or a switch? Use a switch when activating something
+instead of selecting.</p>
+<h3 id="usage">Usage&nbsp;<sp-link class="header-anchor" href="#usage" aria-label="§">#</sp-link></h3>
+<p><a href="https://www.npmjs.com/package/@spectrum-web-components/checkbox"><img src="https://img.shields.io/npm/v/@spectrum-web-components/checkbox?style=for-the-badge" alt="See it on NPM!"></a>
+<a href="https://bundlephobia.com/result?p=@spectrum-web-components/checkbox"><img src="https://img.shields.io/bundlephobia/minzip/@spectrum-web-components/checkbox?style=for-the-badge" alt="How big is this package in your project?"></a></p>
+<pre><code>yarn add @spectrum-web-components/checkbox
+</code></pre>
+<p>Import the side effectful registration of <code>&lt;sp-checkbox&gt;</code> via:</p>
+<pre><code>import '@spectrum-web-components/checkbox/sp-checkbox.js';
+</code></pre>
+<p>When looking to leverage the <code>Checkbox</code> base class as a type and/or for extension purposes, do so via:</p>
+<pre><code>import { Checkbox } from '@spectrum-web-components/checkbox';
+</code></pre>
+<h3 id="example">Example&nbsp;<sp-link class="header-anchor" href="#example" aria-label="§">#</sp-link></h3>
+<p><sp-icons-medium></sp-icons-medium></p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="standard-checkboxes">Standard checkboxes&nbsp;<sp-link class="header-anchor" href="#standard-checkboxes" aria-label="§">#</sp-link></h3>
+<p>Standard checkboxes are the default style for checkboxes. The blue color
+provides a visual prominence that is optimal for forms, settings, lists or grids
+of assets, etc. where the checkboxes need to be noticed.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="quiet-checkboxes">Quiet checkboxes&nbsp;<sp-link class="header-anchor" href="#quiet-checkboxes" aria-label="§">#</sp-link></h3>
+<p>Quiet checkboxes are a secondary style for checkboxes. The gray color provides a
+less prominent style than the standard checkboxes. They are optimal for
+application panels where all visual elements are monochrome in order to direct
+focus to the content.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">quiet</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="states">States&nbsp;<sp-link class="header-anchor" href="#states" aria-label="§">#</sp-link></h3>
+<p>In addition to the variant, sp-checkboxes have a number of attributes for
+controlling their visual state. All checkbox variants support the <code>disabled</code>,
+<code>indeterminate</code>, <code>invalid</code> attributes, which applies a disabled style to the
+checkbox, and also prevents clicks from activating it.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>checked:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>indeterminate:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">indeterminate</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>invalid:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">invalid</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>disabled:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="handling-events">Handling events&nbsp;<sp-link class="header-anchor" href="#handling-events" aria-label="§">#</sp-link></h3>
+<p>Event handlers for clicks and other user actions can be registered on an <code>&lt;sp-checkbox&gt;</code> as they would a standard <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span><br>    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-example<span class="token punctuation">"</span></span><br>    <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>spAlert(this, '&lt;sp-checkbox> clicked!')<span class="token punctuation">"</span></span><br><span class="token punctuation">></span></span><br>    Web component<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="accessibility">Accessibility&nbsp;<sp-link class="header-anchor" href="#accessibility" aria-label="§">#</sp-link></h2>
+<p>Checkboxes are accessible by default, rendered in HTML using the <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element. When the checkbox is set as <code>indeterminate</code> or
+<code>invalid</code>, the appropriate ARIA state attribute will automatically be applied.</p>
+
+</div>

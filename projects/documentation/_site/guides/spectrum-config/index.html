@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spectrum Config: Spectrum Web Components</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+<link
+    rel="apple-touch-icon"
+    href="/images/icons/icon-192x192.png"
+/>
+<meta name="theme-color" content="#e1251b" />
+<link rel="manifest" href="/manifest.webmanifest" />
+
+
+<meta property="og:site_name" content="Spectrum Web Components" />
+<meta property="og:title" content="Spectrum Config: Spectrum Web Components - Spectrum Web Components" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="//guides/spectrum-config/" />
+
+
+
+
+  <meta name="description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+  <meta name="twitter:description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+  <meta property="og:description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+
+
+
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+      <link rel="stylesheet" href="/fonts.css">
+    </noscript>
+    
+    
+  </head>
+  <body>
+    
+      <docs-page class="spectrum-Typography">
+    <a id="logo" href="/index.html" slot="logo">
+    <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0"
+        y="0"
+        viewBox="0 0 30 26"
+        width="36px"
+        xml:space="preserve"
+        aria-hidden="true"
+    >
+        <path
+            fill="#FA0F00"
+            d="M19 0h11v26zM11.1 0H0v26zM15 9.6L22.1 26h-4.6l-2.1-5.2h-5.2z"
+        />
+    </svg>
+    <h1 class="title logo">
+        Spectrum
+        <br />
+        Web&nbsp;Components
+    </h1>
+</a>
+    <h1>Specification for .spectrum-config.js files</h1>
+<p>The following is an annotated example that serves to document the format
+of the spectrum-config.js file. A higher-level explanation may be found
+<a href="/guides/adding-component">here</a>.</p>
+<h2 id="annotated-sample">Annotated Sample&nbsp;<sp-link class="header-anchor" href="#annotated-sample" aria-label="§">#</sp-link></h2>
+<pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><br>    <span class="token comment">// This is the name that the component has in spectrum-css. If you look</span><br>    <span class="token comment">// in node_modules/@adobe/spectrum-css/dist/components, what is the name</span><br>    <span class="token comment">// of the directory that contains the CSS for the component that you are</span><br>    <span class="token comment">// implementing</span><br>    spectrum<span class="token operator">:</span> <span class="token string">'button'</span><span class="token punctuation">,</span><br>    <span class="token comment">// A list of the components that we would like to generate CSS for. We can</span><br>    <span class="token comment">// generate CSS for multiple related components (e.g button and action button)</span><br>    components<span class="token operator">:</span> <span class="token punctuation">[</span><br>        <span class="token punctuation">{</span><br>            <span class="token comment">// The basename for this component. This will control the naming of the</span><br>            <span class="token comment">// generated CSS file</span><br>            name<span class="token operator">:</span> <span class="token string">'button'</span><span class="token punctuation">,</span><br>            <span class="token comment">// Information about the main CSS class for this component. This is the</span><br>            <span class="token comment">// name of the CSS class in the spectrum-css file that relates to this</span><br>            <span class="token comment">// component (e.g. .spectrum-Button). You can optionally provide a</span><br>            <span class="token comment">// shadowSelector which will allow you to map the rules to an element</span><br>            <span class="token comment">// in your shadow DOM. The default selector for the CSS rules is :host.</span><br>            <span class="token comment">// If you are mapping to the default host: selector then you can</span><br>            <span class="token comment">// simply say "host: '.spectrum-Button'"</span><br>            host<span class="token operator">:</span> <span class="token punctuation">{</span><br>                <span class="token comment">// The selector from spectrum-css for the root of the component</span><br>                selector<span class="token operator">:</span> <span class="token string">'.spectrum-Button'</span><span class="token punctuation">,</span><br>                <span class="token comment">// The selector in the shadow DOM to map to (defaults to :host)</span><br>                shadowSelector<span class="token operator">:</span> <span class="token string">'#button'</span><span class="token punctuation">,</span><br>            <span class="token punctuation">}</span><span class="token punctuation">,</span><br>            <span class="token comment">// For components that can receive focus, this is the element in the</span><br>            <span class="token comment">// shadow DOM that should receive focus</span><br>            focus<span class="token operator">:</span> <span class="token string">'#button'</span><span class="token punctuation">,</span><br>            <span class="token comment">// These are the options for the component that are set using attributes</span><br>            <span class="token comment">// on the web component (e.g. quiet in &lt;sp-button quiet>Click me&lt;/sp-button>)</span><br>            attributes<span class="token operator">:</span> <span class="token punctuation">[</span><br>                <span class="token comment">// Attributes may have a boolean type. In that case, if the attribute</span><br>                <span class="token comment">// is present, the option is true</span><br>                <span class="token punctuation">{</span><br>                    <span class="token comment">// Type of the attribute</span><br>                    type<span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// The selector whos rules should come into effect when the</span><br>                    <span class="token comment">// option is true</span><br>                    selector<span class="token operator">:</span> <span class="token string">'.spectrum-Button--quiet'</span><span class="token punctuation">,</span><br>                <span class="token punctuation">}</span><span class="token punctuation">,</span><br>                <span class="token punctuation">{</span><br>                    type<span class="token operator">:</span> <span class="token string">'boolean'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// An example of mapping a pseudo attribute to an attribute</span><br>                    <span class="token comment">// on the web component</span><br>                    selector<span class="token operator">:</span> <span class="token string">':disabled'</span><span class="token punctuation">,</span><br>                <span class="token punctuation">}</span><span class="token punctuation">,</span><br>                <span class="token comment">// Attributes may also be of type enum. In that case, there is</span><br>                <span class="token comment">// usually a list of CSS classes in spectrum-css, of which only</span><br>                <span class="token comment">// one should be present at a time.</span><br>                <span class="token punctuation">{</span><br>                    type<span class="token operator">:</span> <span class="token string">'enum'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// For enums, we need to provide a name here for the attribute</span><br>                    <span class="token comment">// as it is defined in the implementation of the component</span><br>                    name<span class="token operator">:</span> <span class="token string">'variant'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// This is a list of possible values for the attribute. If</span><br>                    <span class="token comment">// the option is of the form ".spectrum-Button--cta" where</span><br>                    <span class="token comment">// ".spectrum-Button" is the root CSS class, then we can extract</span><br>                    <span class="token comment">// the enum value name automatically</span><br>                    values<span class="token operator">:</span> <span class="token punctuation">[</span><br>                        <span class="token comment">// This related the enum value &lt;sp-button variant="cta"></span><br>                        <span class="token string">'.spectrum-Button--cta'</span><span class="token punctuation">,</span><br>                        <span class="token string">'.spectrum-Button--primary'</span><span class="token punctuation">,</span><br>                        <span class="token string">'.spectrum-Button--secondary'</span><span class="token punctuation">,</span><br>                        <span class="token comment">// If for some reason, we need to override the enum</span><br>                        <span class="token comment">// values name, we can provide an object with the</span><br>                        <span class="token comment">// selector and name explicitly</span><br>                        <span class="token punctuation">{</span><br>                            name<span class="token operator">:</span> <span class="token string">'negative'</span><span class="token punctuation">,</span><br>                            selector<span class="token operator">:</span> <span class="token string">'.spectrum-Button--warning'</span><span class="token punctuation">,</span><br>                        <span class="token punctuation">}</span><span class="token punctuation">,</span><br>                        <span class="token string">'.spectrum-Button--overBackground'</span><span class="token punctuation">,</span><br>                        <span class="token string">'.spectrum-Button--secondary'</span><span class="token punctuation">,</span><br>                    <span class="token punctuation">]</span><span class="token punctuation">,</span><br>                <span class="token punctuation">}</span><span class="token punctuation">,</span><br>            <span class="token punctuation">]</span><span class="token punctuation">,</span><br>            <span class="token comment">// This is a list of all of the spectrum-css class names that we</span><br>            <span class="token comment">// wish to map to ids in the shadow DOM.</span><br>            ids<span class="token operator">:</span> <span class="token punctuation">[</span><br>                <span class="token comment">// If the class name follows the patter of starting with the</span><br>                <span class="token comment">// root class, then we can extract the id automatically. In this</span><br>                <span class="token comment">// case it would be #label</span><br>                <span class="token string">'.spectrum-Button-label'</span><span class="token punctuation">,</span><br>                <span class="token comment">// We can also explicitly provide the selector and the name</span><br>                <span class="token punctuation">{</span><br>                    selector<span class="token operator">:</span> <span class="token string">'.spectrum-Button-label'</span><span class="token punctuation">,</span><br>                    name<span class="token operator">:</span> <span class="token string">'label'</span><br>                <span class="token punctuation">}</span><br>            <span class="token punctuation">]</span><span class="token punctuation">,</span><br>            <span class="token comment">// We can provide a list of classes that we wish to map. It is</span><br>            <span class="token comment">// preferred to use ids when possible. There are some cases</span><br>            <span class="token comment">// where it is necessary to use a set CSS rules on multiple</span><br>            <span class="token comment">// components in the shadow DOM. In that case, you should map</span><br>            <span class="token comment">// the spectrum-css class to a shorter name</span><br>            classes<span class="token operator">:</span> <span class="token punctuation">[</span><br>                <span class="token punctuation">{</span><br>                    <span class="token comment">// Classname in the original spectrum-css</span><br>                    selector<span class="token operator">:</span> <span class="token string">'.spectrum-Slider-track'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// New name to use. This will create the class .track</span><br>                    name<span class="token operator">:</span> <span class="token string">'track'</span><span class="token punctuation">,</span><br>                <span class="token punctuation">}</span><span class="token punctuation">,</span><br>            <span class="token punctuation">]</span><span class="token punctuation">,</span><br>            <span class="token comment">// A list of slots on our web component that we wish to apply</span><br>            <span class="token comment">// spectrum-css rules to</span><br>            slots<span class="token operator">:</span> <span class="token punctuation">[</span><br>                <span class="token punctuation">{</span><br>                    <span class="token comment">// The name of the slot (e.g. &lt;slot name="icon">)</span><br>                    name<span class="token operator">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span><br>                    <span class="token comment">// The spectrum-css selector who's rules we wish to apply</span><br>                    selector<span class="token operator">:</span> <span class="token string">'.spectrum-Icon'</span><span class="token punctuation">,</span><br>                <span class="token punctuation">}</span><span class="token punctuation">,</span><br>            <span class="token punctuation">]</span><span class="token punctuation">,</span><br>            <span class="token comment">// Regular expressions for rules that we wish to exclude from our</span><br>            <span class="token comment">// processing. There are rules that do not make sense in a web</span><br>            <span class="token comment">// component, and it is good form to keep our CSS as small as</span><br>            <span class="token comment">// possible</span><br>            exclude<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex">/\.is-disabled/</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>        <span class="token punctuation">}</span><span class="token punctuation">,</span><br>        <span class="token punctuation">{</span><br>            <span class="token comment">// A second component specification in the same file</span><br>            name<span class="token operator">:</span> <span class="token string">'action-button'</span><span class="token punctuation">,</span><br>            host<span class="token operator">:</span> <span class="token punctuation">{</span><br>                selector<span class="token operator">:</span> <span class="token string">'.spectrum-ActionButton'</span><span class="token punctuation">,</span><br>                shadowSelector<span class="token operator">:</span> <span class="token string">'#button'</span><span class="token punctuation">,</span><br>            <span class="token punctuation">}</span><span class="token punctuation">,</span><br>            <span class="token operator">...</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">]</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+
+    <sp-sidenav manage-tab-index slot="side-nav" value="">
+    <sp-sidenav-item
+        label="Components"
+        expanded
+        multiLevel
+    >
+        <span slot="no-js">Components</span>
+        
+            <sp-sidenav-item
+                label="Accordion"
+                href="/components/accordion/"
+                value="accordion"
+            >
+                <a href="/components/accordion/" slot="no-js">Accordion</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Button"
+                href="/components/action-button/"
+                value="action-button"
+            >
+                <a href="/components/action-button/" slot="no-js">Action Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Group"
+                href="/components/action-group/"
+                value="action-group"
+            >
+                <a href="/components/action-group/" slot="no-js">Action Group</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Menu"
+                href="/components/action-menu/"
+                value="action-menu"
+            >
+                <a href="/components/action-menu/" slot="no-js">Action Menu</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Actionbar"
+                href="/components/actionbar/"
+                value="actionbar"
+            >
+                <a href="/components/actionbar/" slot="no-js">Actionbar</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Asset"
+                href="/components/asset/"
+                value="asset"
+            >
+                <a href="/components/asset/" slot="no-js">Asset</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Avatar"
+                href="/components/avatar/"
+                value="avatar"
+            >
+                <a href="/components/avatar/" slot="no-js">Avatar</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Banner"
+                href="/components/banner/"
+                value="banner"
+            >
+                <a href="/components/banner/" slot="no-js">Banner</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Bar Loader"
+                href="/components/bar-loader/"
+                value="bar-loader"
+            >
+                <a href="/components/bar-loader/" slot="no-js">Bar Loader</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Base"
+                href="/components/base/"
+                value="base"
+            >
+                <a href="/components/base/" slot="no-js">Base</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Bundle"
+                href="/components/bundle/"
+                value="bundle"
+            >
+                <a href="/components/bundle/" slot="no-js">Bundle</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Button"
+                href="/components/button/"
+                value="button"
+            >
+                <a href="/components/button/" slot="no-js">Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Button Group"
+                href="/components/button-group/"
+                value="button-group"
+            >
+                <a href="/components/button-group/" slot="no-js">Button Group</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Card"
+                href="/components/card/"
+                value="card"
+            >
+                <a href="/components/card/" slot="no-js">Card</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Checkbox"
+                href="/components/checkbox/"
+                value="checkbox"
+            >
+                <a href="/components/checkbox/" slot="no-js">Checkbox</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Circle Loader"
+                href="/components/circle-loader/"
+                value="circle-loader"
+            >
+                <a href="/components/circle-loader/" slot="no-js">Circle Loader</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Coachmark"
+                href="/components/coachmark/"
+                value="coachmark"
+            >
+                <a href="/components/coachmark/" slot="no-js">Coachmark</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dialog"
+                href="/components/dialog/"
+                value="dialog"
+            >
+                <a href="/components/dialog/" slot="no-js">Dialog</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dialog Wrapper"
+                href="/components/dialog-wrapper/"
+                value="dialog-wrapper"
+            >
+                <a href="/components/dialog-wrapper/" slot="no-js">Dialog Wrapper</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dropdown"
+                href="/components/dropdown/"
+                value="dropdown"
+            >
+                <a href="/components/dropdown/" slot="no-js">Dropdown</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dropzone"
+                href="/components/dropzone/"
+                value="dropzone"
+            >
+                <a href="/components/dropzone/" slot="no-js">Dropzone</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icon"
+                href="/components/icon/"
+                value="icon"
+            >
+                <a href="/components/icon/" slot="no-js">Icon</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons"
+                href="/components/icons/"
+                value="icons"
+            >
+                <a href="/components/icons/" slot="no-js">Icons</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons Ui"
+                href="/components/icons-ui/"
+                value="icons-ui"
+            >
+                <a href="/components/icons-ui/" slot="no-js">Icons Ui</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons Workflow"
+                href="/components/icons-workflow/"
+                value="icons-workflow"
+            >
+                <a href="/components/icons-workflow/" slot="no-js">Icons Workflow</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Iconset"
+                href="/components/iconset/"
+                value="iconset"
+            >
+                <a href="/components/iconset/" slot="no-js">Iconset</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Illustrated Message"
+                href="/components/illustrated-message/"
+                value="illustrated-message"
+            >
+                <a href="/components/illustrated-message/" slot="no-js">Illustrated Message</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Link"
+                href="/components/link/"
+                value="link"
+            >
+                <a href="/components/link/" slot="no-js">Link</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Menu"
+                href="/components/menu/"
+                value="menu"
+            >
+                <a href="/components/menu/" slot="no-js">Menu</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Overlay"
+                href="/components/overlay/"
+                value="overlay"
+            >
+                <a href="/components/overlay/" slot="no-js">Overlay</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Popover"
+                href="/components/popover/"
+                value="popover"
+            >
+                <a href="/components/popover/" slot="no-js">Popover</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Quick Actions"
+                href="/components/quick-actions/"
+                value="quick-actions"
+            >
+                <a href="/components/quick-actions/" slot="no-js">Quick Actions</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Radio"
+                href="/components/radio/"
+                value="radio"
+            >
+                <a href="/components/radio/" slot="no-js">Radio</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Rule"
+                href="/components/rule/"
+                value="rule"
+            >
+                <a href="/components/rule/" slot="no-js">Rule</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Search"
+                href="/components/search/"
+                value="search"
+            >
+                <a href="/components/search/" slot="no-js">Search</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Shared"
+                href="/components/shared/"
+                value="shared"
+            >
+                <a href="/components/shared/" slot="no-js">Shared</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Sidenav"
+                href="/components/sidenav/"
+                value="sidenav"
+            >
+                <a href="/components/sidenav/" slot="no-js">Sidenav</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Slider"
+                href="/components/slider/"
+                value="slider"
+            >
+                <a href="/components/slider/" slot="no-js">Slider</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Split Button"
+                href="/components/split-button/"
+                value="split-button"
+            >
+                <a href="/components/split-button/" slot="no-js">Split Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Status Light"
+                href="/components/status-light/"
+                value="status-light"
+            >
+                <a href="/components/status-light/" slot="no-js">Status Light</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Styles"
+                href="/components/styles/"
+                value="styles"
+            >
+                <a href="/components/styles/" slot="no-js">Styles</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Switch"
+                href="/components/switch/"
+                value="switch"
+            >
+                <a href="/components/switch/" slot="no-js">Switch</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tabs"
+                href="/components/tabs/"
+                value="tabs"
+            >
+                <a href="/components/tabs/" slot="no-js">Tabs</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tags"
+                href="/components/tags/"
+                value="tags"
+            >
+                <a href="/components/tags/" slot="no-js">Tags</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Textarea"
+                href="/components/textarea/"
+                value="textarea"
+            >
+                <a href="/components/textarea/" slot="no-js">Textarea</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Textfield"
+                href="/components/textfield/"
+                value="textfield"
+            >
+                <a href="/components/textfield/" slot="no-js">Textfield</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Theme"
+                href="/components/theme/"
+                value="theme"
+            >
+                <a href="/components/theme/" slot="no-js">Theme</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Toast"
+                href="/components/toast/"
+                value="toast"
+            >
+                <a href="/components/toast/" slot="no-js">Toast</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tooltip"
+                href="/components/tooltip/"
+                value="tooltip"
+            >
+                <a href="/components/tooltip/" slot="no-js">Tooltip</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Underlay"
+                href="/components/underlay/"
+                value="underlay"
+            >
+                <a href="/components/underlay/" slot="no-js">Underlay</a>
+            </sp-sidenav-item>
+        
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Contributing"
+        expanded
+        multiLevel
+    >
+        <span slot="no-js">Contributing</span>
+        
+            <sp-sidenav-item
+                label="Adding a New Component"
+                href="/guides/adding-component/"
+                value="adding-component"
+            >
+                <a href="/guides/adding-component/" slot="no-js">Adding a New Component</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Spectrum Config"
+                href="/guides/spectrum-config/"
+                value="spectrum-config"
+            >
+                <a href="/guides/spectrum-config/" slot="no-js">Spectrum Config</a>
+            </sp-sidenav-item>
+        
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Playground"
+        href="storybook/index.html"
+        multilevel
+    >
+        <a href="storybook/index.html" slot="no-js">Playground</a>
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        class="spectrum-web"
+        label="Spectrum"
+        href="https://spectrum.adobe.com/"
+    >
+        <a href="https://spectrum.adobe.com/" slot="no-js">Spectrum</a>
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Spectrum CSS"
+        href="https://opensource.adobe.com/spectrum-css/"
+    >
+        <a href="https://opensource.adobe.com/spectrum-css/" slot="no-js">Spectrum CSS</a>
+    </sp-sidenav-item>
+</sp-sidenav>
+</docs-page>
+<script type="module" src="../../src/index.js"></script>
+    
+    <script async defer>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js');
+          });
+        }
+    </script>
+  </body>
+</html>

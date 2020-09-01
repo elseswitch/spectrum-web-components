@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox API: Spectrum Web Components</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+<link
+    rel="apple-touch-icon"
+    href="/images/icons/icon-192x192.png"
+/>
+<meta name="theme-color" content="#e1251b" />
+<link rel="manifest" href="/manifest.webmanifest" />
+
+
+<meta property="og:site_name" content="Spectrum Web Components" />
+<meta property="og:title" content="Checkbox API: Spectrum Web Components - Spectrum Web Components" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="//components/checkbox/api/" />
+
+
+
+
+  <meta name="description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+  <meta name="twitter:description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+  <meta property="og:description" content="Spectrum Web Components provide interface components as custom elements to help teams work more efficiently and to make applications more consistent." />
+
+
+
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="dns-prefetch" href="https://use.typekit.net">
+    <link rel="stylesheet" href="styles.css">
+    <noscript>
+      <link rel="stylesheet" href="/fonts.css">
+    </noscript>
+    
+    
+  </head>
+  <body>
+    
+      <docs-page class="spectrum-Typography">
+    <div id="title-header" class="spectrum-Article">
+      <h1 class="spectrum-Heading1--display spectrum-Heading1--quiet">sp-checkbox</h1>
+    </div>
+    <sp-tabs
+    selected="api"
+    direction="horizontal"
+>
+    <sp-tab
+        value="examples"
+        label="Examples"
+    ></sp-tab>
+    <sp-tab value="api" label="API"></sp-tab>
+</sp-tabs>
+
+    <div class="parts">
+    
+      <div class="section api">
+        <h2>Attributes and Properties</h2>
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+<th class="spectrum-Table-headCell">
+Name
+</th>
+<th class="spectrum-Table-headCell">
+Attribute
+</th>
+<th class="spectrum-Table-headCell">
+Type
+</th>
+<th class="spectrum-Table-headCell">
+Default
+</th>
+<th class="spectrum-Table-headCell">
+Description
+</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>autofocus</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>autofocus</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+When this control is rendered, focus it automatically
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>checked</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>checked</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>disabled</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+Disable this control. It will not receive focus or events
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>focusElement</code>
+</td>
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+<td class="spectrum-Table-cell">
+<code>HTMLElement</code>
+</td>
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>indeterminate</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>indeterminate</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>invalid</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>invalid</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>quiet</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>quiet</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>boolean</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>false</code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>shadowRoot</code>
+</td>
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+<td class="spectrum-Table-cell">
+<code>ShadowRoot</code>
+</td>
+<td class="spectrum-Table-cell">
+<code></code>
+</td>
+<td class="spectrum-Table-cell">
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>tabIndex</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>tabIndex</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>number</code>
+</td>
+<td class="spectrum-Table-cell">
+<code>0</code>
+</td>
+<td class="spectrum-Table-cell">
+The tab index to apply to this control. See general documentation about
+the tabindex HTML property
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Events</h2>
+<div class="table-container">
+<table class="spectrum-Table">
+<thead class="spectrum-Table-head">
+<tr>
+<th class="spectrum-Table-headCell">
+Name
+</th>
+</tr>
+</thead>
+<tbody class="spectrum-Table-body">
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>change</code>
+</td>
+</tr>
+<tr class="spectrum-Table-row">
+<td class="spectrum-Table-cell">
+<code>keydown</code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+      </div>
+    
+      <div class="section examples">
+        <h2 id="description">Description&nbsp;<sp-link class="header-anchor" href="#description" aria-label="§">#</sp-link></h2>
+<p><code>&lt;sp-checkbox&gt;</code> allow users to select multiple items from a list of independent
+options, or to mark an individual option as selected.</p>
+<p>Should I use a checkbox or a switch? Use a switch when activating something
+instead of selecting.</p>
+<h3 id="usage">Usage&nbsp;<sp-link class="header-anchor" href="#usage" aria-label="§">#</sp-link></h3>
+<p><a href="https://www.npmjs.com/package/@spectrum-web-components/checkbox"><img src="https://img.shields.io/npm/v/@spectrum-web-components/checkbox?style=for-the-badge" alt="See it on NPM!"></a>
+<a href="https://bundlephobia.com/result?p=@spectrum-web-components/checkbox"><img src="https://img.shields.io/bundlephobia/minzip/@spectrum-web-components/checkbox?style=for-the-badge" alt="How big is this package in your project?"></a></p>
+<pre><code>yarn add @spectrum-web-components/checkbox
+</code></pre>
+<p>Import the side effectful registration of <code>&lt;sp-checkbox&gt;</code> via:</p>
+<pre><code>import '@spectrum-web-components/checkbox/sp-checkbox.js';
+</code></pre>
+<p>When looking to leverage the <code>Checkbox</code> base class as a type and/or for extension purposes, do so via:</p>
+<pre><code>import { Checkbox } from '@spectrum-web-components/checkbox';
+</code></pre>
+<h3 id="example">Example&nbsp;<sp-link class="header-anchor" href="#example" aria-label="§">#</sp-link></h3>
+<p><sp-icons-medium></sp-icons-medium></p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="standard-checkboxes">Standard checkboxes&nbsp;<sp-link class="header-anchor" href="#standard-checkboxes" aria-label="§">#</sp-link></h3>
+<p>Standard checkboxes are the default style for checkboxes. The blue color
+provides a visual prominence that is optimal for forms, settings, lists or grids
+of assets, etc. where the checkboxes need to be noticed.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="quiet-checkboxes">Quiet checkboxes&nbsp;<sp-link class="header-anchor" href="#quiet-checkboxes" aria-label="§">#</sp-link></h3>
+<p>Quiet checkboxes are a secondary style for checkboxes. The gray color provides a
+less prominent style than the standard checkboxes. They are optimal for
+application panels where all visual elements are monochrome in order to direct
+focus to the content.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">quiet</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="states">States&nbsp;<sp-link class="header-anchor" href="#states" aria-label="§">#</sp-link></h3>
+<p>In addition to the variant, sp-checkboxes have a number of attributes for
+controlling their visual state. All checkbox variants support the <code>disabled</code>,
+<code>indeterminate</code>, <code>invalid</code> attributes, which applies a disabled style to the
+checkbox, and also prevents clicks from activating it.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>checked:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>indeterminate:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">indeterminate</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>invalid:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">invalid</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span><br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>disabled:<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>Web component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="handling-events">Handling events&nbsp;<sp-link class="header-anchor" href="#handling-events" aria-label="§">#</sp-link></h3>
+<p>Event handlers for clicks and other user actions can be registered on an <code>&lt;sp-checkbox&gt;</code> as they would a standard <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-checkbox</span><br>    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox-example<span class="token punctuation">"</span></span><br>    <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>spAlert(this, '&lt;sp-checkbox> clicked!')<span class="token punctuation">"</span></span><br><span class="token punctuation">></span></span><br>    Web component<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-checkbox</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="accessibility">Accessibility&nbsp;<sp-link class="header-anchor" href="#accessibility" aria-label="§">#</sp-link></h2>
+<p>Checkboxes are accessible by default, rendered in HTML using the <code>&lt;input type=&quot;checkbox&quot;&gt;</code> element. When the checkbox is set as <code>indeterminate</code> or
+<code>invalid</code>, the appropriate ARIA state attribute will automatically be applied.</p>
+
+      </div>
+    
+    </div>
+    <sp-sidenav manage-tab-index slot="side-nav" value="checkbox">
+    <sp-sidenav-item
+        label="Components"
+        expanded
+        multiLevel
+    >
+        <span slot="no-js">Components</span>
+        
+            <sp-sidenav-item
+                label="Accordion"
+                href="/components/accordion/"
+                value="accordion"
+            >
+                <a href="/components/accordion/" slot="no-js">Accordion</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Button"
+                href="/components/action-button/"
+                value="action-button"
+            >
+                <a href="/components/action-button/" slot="no-js">Action Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Group"
+                href="/components/action-group/"
+                value="action-group"
+            >
+                <a href="/components/action-group/" slot="no-js">Action Group</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Action Menu"
+                href="/components/action-menu/"
+                value="action-menu"
+            >
+                <a href="/components/action-menu/" slot="no-js">Action Menu</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Actionbar"
+                href="/components/actionbar/"
+                value="actionbar"
+            >
+                <a href="/components/actionbar/" slot="no-js">Actionbar</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Asset"
+                href="/components/asset/"
+                value="asset"
+            >
+                <a href="/components/asset/" slot="no-js">Asset</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Avatar"
+                href="/components/avatar/"
+                value="avatar"
+            >
+                <a href="/components/avatar/" slot="no-js">Avatar</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Banner"
+                href="/components/banner/"
+                value="banner"
+            >
+                <a href="/components/banner/" slot="no-js">Banner</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Bar Loader"
+                href="/components/bar-loader/"
+                value="bar-loader"
+            >
+                <a href="/components/bar-loader/" slot="no-js">Bar Loader</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Base"
+                href="/components/base/"
+                value="base"
+            >
+                <a href="/components/base/" slot="no-js">Base</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Bundle"
+                href="/components/bundle/"
+                value="bundle"
+            >
+                <a href="/components/bundle/" slot="no-js">Bundle</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Button"
+                href="/components/button/"
+                value="button"
+            >
+                <a href="/components/button/" slot="no-js">Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Button Group"
+                href="/components/button-group/"
+                value="button-group"
+            >
+                <a href="/components/button-group/" slot="no-js">Button Group</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Card"
+                href="/components/card/"
+                value="card"
+            >
+                <a href="/components/card/" slot="no-js">Card</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Checkbox"
+                href="/components/checkbox/"
+                value="checkbox"
+            >
+                <a href="/components/checkbox/" slot="no-js">Checkbox</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Circle Loader"
+                href="/components/circle-loader/"
+                value="circle-loader"
+            >
+                <a href="/components/circle-loader/" slot="no-js">Circle Loader</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Coachmark"
+                href="/components/coachmark/"
+                value="coachmark"
+            >
+                <a href="/components/coachmark/" slot="no-js">Coachmark</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dialog"
+                href="/components/dialog/"
+                value="dialog"
+            >
+                <a href="/components/dialog/" slot="no-js">Dialog</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dialog Wrapper"
+                href="/components/dialog-wrapper/"
+                value="dialog-wrapper"
+            >
+                <a href="/components/dialog-wrapper/" slot="no-js">Dialog Wrapper</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dropdown"
+                href="/components/dropdown/"
+                value="dropdown"
+            >
+                <a href="/components/dropdown/" slot="no-js">Dropdown</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Dropzone"
+                href="/components/dropzone/"
+                value="dropzone"
+            >
+                <a href="/components/dropzone/" slot="no-js">Dropzone</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icon"
+                href="/components/icon/"
+                value="icon"
+            >
+                <a href="/components/icon/" slot="no-js">Icon</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons"
+                href="/components/icons/"
+                value="icons"
+            >
+                <a href="/components/icons/" slot="no-js">Icons</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons Ui"
+                href="/components/icons-ui/"
+                value="icons-ui"
+            >
+                <a href="/components/icons-ui/" slot="no-js">Icons Ui</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Icons Workflow"
+                href="/components/icons-workflow/"
+                value="icons-workflow"
+            >
+                <a href="/components/icons-workflow/" slot="no-js">Icons Workflow</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Iconset"
+                href="/components/iconset/"
+                value="iconset"
+            >
+                <a href="/components/iconset/" slot="no-js">Iconset</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Illustrated Message"
+                href="/components/illustrated-message/"
+                value="illustrated-message"
+            >
+                <a href="/components/illustrated-message/" slot="no-js">Illustrated Message</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Link"
+                href="/components/link/"
+                value="link"
+            >
+                <a href="/components/link/" slot="no-js">Link</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Menu"
+                href="/components/menu/"
+                value="menu"
+            >
+                <a href="/components/menu/" slot="no-js">Menu</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Overlay"
+                href="/components/overlay/"
+                value="overlay"
+            >
+                <a href="/components/overlay/" slot="no-js">Overlay</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Popover"
+                href="/components/popover/"
+                value="popover"
+            >
+                <a href="/components/popover/" slot="no-js">Popover</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Quick Actions"
+                href="/components/quick-actions/"
+                value="quick-actions"
+            >
+                <a href="/components/quick-actions/" slot="no-js">Quick Actions</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Radio"
+                href="/components/radio/"
+                value="radio"
+            >
+                <a href="/components/radio/" slot="no-js">Radio</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Rule"
+                href="/components/rule/"
+                value="rule"
+            >
+                <a href="/components/rule/" slot="no-js">Rule</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Search"
+                href="/components/search/"
+                value="search"
+            >
+                <a href="/components/search/" slot="no-js">Search</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Shared"
+                href="/components/shared/"
+                value="shared"
+            >
+                <a href="/components/shared/" slot="no-js">Shared</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Sidenav"
+                href="/components/sidenav/"
+                value="sidenav"
+            >
+                <a href="/components/sidenav/" slot="no-js">Sidenav</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Slider"
+                href="/components/slider/"
+                value="slider"
+            >
+                <a href="/components/slider/" slot="no-js">Slider</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Split Button"
+                href="/components/split-button/"
+                value="split-button"
+            >
+                <a href="/components/split-button/" slot="no-js">Split Button</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Status Light"
+                href="/components/status-light/"
+                value="status-light"
+            >
+                <a href="/components/status-light/" slot="no-js">Status Light</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Styles"
+                href="/components/styles/"
+                value="styles"
+            >
+                <a href="/components/styles/" slot="no-js">Styles</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Switch"
+                href="/components/switch/"
+                value="switch"
+            >
+                <a href="/components/switch/" slot="no-js">Switch</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tabs"
+                href="/components/tabs/"
+                value="tabs"
+            >
+                <a href="/components/tabs/" slot="no-js">Tabs</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tags"
+                href="/components/tags/"
+                value="tags"
+            >
+                <a href="/components/tags/" slot="no-js">Tags</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Textarea"
+                href="/components/textarea/"
+                value="textarea"
+            >
+                <a href="/components/textarea/" slot="no-js">Textarea</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Textfield"
+                href="/components/textfield/"
+                value="textfield"
+            >
+                <a href="/components/textfield/" slot="no-js">Textfield</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Theme"
+                href="/components/theme/"
+                value="theme"
+            >
+                <a href="/components/theme/" slot="no-js">Theme</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Toast"
+                href="/components/toast/"
+                value="toast"
+            >
+                <a href="/components/toast/" slot="no-js">Toast</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Tooltip"
+                href="/components/tooltip/"
+                value="tooltip"
+            >
+                <a href="/components/tooltip/" slot="no-js">Tooltip</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Underlay"
+                href="/components/underlay/"
+                value="underlay"
+            >
+                <a href="/components/underlay/" slot="no-js">Underlay</a>
+            </sp-sidenav-item>
+        
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Contributing"
+        expanded
+        multiLevel
+    >
+        <span slot="no-js">Contributing</span>
+        
+            <sp-sidenav-item
+                label="Adding a New Component"
+                href="/guides/adding-component/"
+                value="adding-component"
+            >
+                <a href="/guides/adding-component/" slot="no-js">Adding a New Component</a>
+            </sp-sidenav-item>
+        
+            <sp-sidenav-item
+                label="Spectrum Config"
+                href="/guides/spectrum-config/"
+                value="spectrum-config"
+            >
+                <a href="/guides/spectrum-config/" slot="no-js">Spectrum Config</a>
+            </sp-sidenav-item>
+        
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Playground"
+        href="storybook/index.html"
+        multilevel
+    >
+        <a href="storybook/index.html" slot="no-js">Playground</a>
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        class="spectrum-web"
+        label="Spectrum"
+        href="https://spectrum.adobe.com/"
+    >
+        <a href="https://spectrum.adobe.com/" slot="no-js">Spectrum</a>
+    </sp-sidenav-item>
+    <sp-sidenav-item
+        label="Spectrum CSS"
+        href="https://opensource.adobe.com/spectrum-css/"
+    >
+        <a href="https://opensource.adobe.com/spectrum-css/" slot="no-js">Spectrum CSS</a>
+    </sp-sidenav-item>
+</sp-sidenav>
+</docs-page>
+<script type="module" src="../../../src/index.js"></script>
+<script type="module" src="../../../src/components.js"></script>
+    
+    <script async defer>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js');
+          });
+        }
+    </script>
+  </body>
+</html>

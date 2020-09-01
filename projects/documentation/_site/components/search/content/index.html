@@ -1,0 +1,23 @@
+<div class="section examples">
+    <h2 id="description">Description&nbsp;<sp-link class="header-anchor" href="#description" aria-label="§">#</sp-link></h2>
+<p>The <code>&lt;sp-search&gt;</code> element delivers a single input field with a &quot;reset&quot; button as well as a mangifying glass icon with which to power search interactions.</p>
+<h3 id="usage">Usage&nbsp;<sp-link class="header-anchor" href="#usage" aria-label="§">#</sp-link></h3>
+<p><a href="https://www.npmjs.com/package/@spectrum-web-components/search"><img src="https://img.shields.io/npm/v/@spectrum-web-components/search?style=for-the-badge" alt="See it on NPM!"></a>
+<a href="https://bundlephobia.com/result?p=@spectrum-web-components/search"><img src="https://img.shields.io/bundlephobia/minzip/@spectrum-web-components/search?style=for-the-badge" alt="How big is this package in your project?"></a></p>
+<pre><code>yarn add @spectrum-web-components/search
+</code></pre>
+<p>Import the side effectful registration of <code>&lt;sp-search&gt;</code> via:</p>
+<pre><code>import '@spectrum-web-components/search/sp-search.js';
+</code></pre>
+<p>When looking to leverage the <code>Search</code> base class as a type and/or for extension purposes, do so via:</p>
+<pre><code>import { Search } from '@spectrum-web-components/search';
+</code></pre>
+<h2 id="example">Example&nbsp;<sp-link class="header-anchor" href="#example" aria-label="§">#</sp-link></h2>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-search</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-search</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-search</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-search</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="variants">Variants&nbsp;<sp-link class="header-anchor" href="#variants" aria-label="§">#</sp-link></h2>
+<h3 id="quiet">Quiet&nbsp;<sp-link class="header-anchor" href="#quiet" aria-label="§">#</sp-link></h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-search</span> <span class="token attr-name">quiet</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-search</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sp-search</span> <span class="token attr-name">quiet</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sp-search</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="events">Events&nbsp;<sp-link class="header-anchor" href="#events" aria-label="§">#</sp-link></h2>
+<p>The <code>submit</code> event fires when the <code>&lt;sp-search&gt;</code> is submitted. This is a non-<code>composed</code> event inline with what you would expect a <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event"><code>&lt;form /&gt;</code></a>{:target=&quot;_blank&quot;} to fire. If you choose to prevent the default of this event, the default action for the underlying <code>&lt;form /&gt;</code> element will also be prevented, which will allow you to handle the search action in javascript.</p>
+
+</div>
